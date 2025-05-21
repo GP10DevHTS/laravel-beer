@@ -30,6 +30,13 @@ class BeerServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
                 Commands\ServeBeerCommand::class,
+                Commands\CheersCommand::class,    // New command
+                Commands\WisdomCommand::class,     // New
+                Commands\HappyHourCommand::class,  // New
+                Commands\EmptyKegCommand::class,   // New
+                Commands\OpenProjectCommand::class,   // New
+                Commands\BeerTestCommand::class,   // New
+                Commands\BrewCommand::class,         // New
             ]);
         }
     }

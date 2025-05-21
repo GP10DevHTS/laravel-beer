@@ -79,3 +79,37 @@ php artisan beer:serve
 ```
 
 This will display a random beer-related quote, a fun message, or the classic "Here's a cold Nile Beer for you!" message.
+
+#### More Fun Commands:
+
+*   **`php artisan beer:cheers {name?}`**
+    *   Sends a cheers message. You can optionally provide a name for a personalized touch.
+    *   Example: `php artisan beer:cheers Jules`
+    *   Output: "🍻 Cheers, Jules! May your code flow as smoothly as a well-poured pint."
+
+*   **`php artisan beer:wisdom`**
+    *   Shares a piece of beer-related wisdom or coding philosophy.
+    *   Example: `php artisan beer:wisdom`
+    *   Output: "🍺 Beer Wisdom: Code without tests is like a beer without a head. Something's missing."
+
+*   **`php artisan beer:happy-hour`**
+    *   Announces happy hour or displays a fun related message, sometimes with ASCII art.
+    *   Example: `php artisan beer:happy-hour`
+    *   Output: "It's Beer O'Clock Somewhere! 🍻 Why not take a short break?" (or ASCII art)
+
+*   **`php artisan beer:empty-keg`**
+    *   Clears your application's view and application caches, with themed messages.
+    *   Example: `php artisan beer:empty-keg`
+    *   Output: "🛢️ Time to empty the old kegs..." followed by Artisan output from `view:clear` and `cache:clear`.
+
+*   **`php artisan beer:open`**
+    *   Serves your Laravel project using `php artisan serve`, but with some encouraging beer-themed messages.
+    *   Example: `php artisan beer:open`
+    *   Output: "🍺 Tapping a fresh keg and firing up the server..." followed by the standard `php artisan serve` output.
+
+*   **`php artisan beer:test {--passthru options}`**
+    *   Runs your application's tests using `php artisan test`. It displays some beer-themed ASCII art and messages before running the tests.
+    *   You can pass options to the underlying `artisan test` command (e.g., `--coverage`, or a test file/filter if supported by your setup).
+    *   Example: `php artisan beer:test`
+    *   Example with options: `php artisan beer:test --coverage`
+    *   Output: Beer ASCII art, themed messages, and then the standard `php artisan test` output.
