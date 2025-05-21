@@ -1,0 +1,30 @@
+{
+    "name": "gp10devhts/laravel-beer",
+    "description": "A Laravel package for developers who love Nile beer and clean code.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Your Name",
+            "email": "you@example.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^8.0|^9.0|^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gp10devhts\\LaravelBeer\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Gp10devhts\\LaravelBeer\\BeerServiceProvider"
+            ]
+        }
+    }
+}
