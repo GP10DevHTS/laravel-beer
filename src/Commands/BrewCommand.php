@@ -37,8 +37,8 @@ class BrewCommand extends Command
         $this->info("🍺 Let's get brewing: <fg=yellow>{$className}</>!");
 
         // Brew Model
-        $this->line("-> Brewing Model: <fg=cyan>App\Models\{$className}.php</>");
-        Artisan::call('make:model', array_merge(['name' => "App\Models\".$className], $makeForce), $this->output);
+        $this->line("-> Brewing Model: <fg=cyan>App\\Models\\{$className}.php</>");
+        Artisan::call('make:model', array_merge(['name' => "App\\Models\\".$className], $makeForce), $this->output);
 
         // Brew Migration
         $migrationName = 'create_' . Str::snake(Str::plural($className)) . '_table';
@@ -52,7 +52,7 @@ class BrewCommand extends Command
         if ($this->option('livewire')) {
             $livewireComponentPath = $className; // Example: "Admin/HopBatch" or just "HopBatch"
              // Users might pass "Foo/Bar" or just "FooBar". Livewire usually handles paths.
-            $this->line("-> Adding a special hoppy touch with Livewire component: <fg=cyan>App\Http\Livewire\" . str_replace('/', '\\', $livewireComponentPath) . ".php</>");
+            $this->line("-> Adding a special hoppy touch with Livewire component: <fg=cyan>App\\Http\\Livewire\\" . str_replace('/', '\\', $livewireComponentPath) . ".php</>");
             Artisan::call('make:livewire', array_merge(['name' => $livewireComponentPath], $makeForce), $this->output);
         }
 
